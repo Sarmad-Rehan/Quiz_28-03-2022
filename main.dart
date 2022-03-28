@@ -47,8 +47,7 @@ void main(List<String> args) {
         stdout.write("Enter Amount you want to debit: ");
         inputAmount = stdin.readLineSync();
         if (double.tryParse(inputAmount!)! > balance) {
-          print(
-              "Your Balance is low can't debit the Amount Provided.\nBalance: $balance");
+          print("Low Balance: $balance");
         } else {
           balance = balance - double.tryParse(inputAmount)!;
           print(
